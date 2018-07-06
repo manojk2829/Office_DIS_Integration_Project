@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium" allow-return-values="true" verbose="1" parallel="tests" thread-count="2">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="local_run" value="false"/>
+    <test name="NO-GO" verbose="1" annotations="JDK">
+        <!--<parameter name="browser" value="firefox"/>-->
+        <!--<parameter name="local_run" value="false"/>-->
+        <classes>
+            <class name="com.carrieriq.applications.seleniumDIS.ValidatePackage" />
+        </classes>
+    </test>
+    <test verbose="2" name="FULL" annotations="JDK">
+        <!--<parameter name="browser" value="firefox"/>-->
+        <!--<parameter name="local_run" value="false"/>-->
+        <classes>
+            <class name="java.com.carrieriq.applications.seleniumDIS.RunAllTestsPKGVal" />
+        </classes>
+    </test>
+</suite>
